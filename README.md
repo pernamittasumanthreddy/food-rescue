@@ -63,4 +63,4 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ---
 
 ## License
-Apache-2.0. Developed for national food rescue and zero-hunger sustainability initiatives across India.
+Proprietary & Confidential. All rights reserved. FoodRescue Enterprise Platform. Commercial redistribution or sublicensing prohibited.
