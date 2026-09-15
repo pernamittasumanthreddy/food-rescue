@@ -1,0 +1,10 @@
+# Force GitHub Linguist and code analyzers to recognize all code and datasets as production code
+* linguist-vendored=false
+* linguist-generated=false
+
+*.sql linguist-detectable=true linguist-vendored=false linguist-generated=false
+*.ts linguist-detectable=true linguist-vendored=false linguist-generated=false
+*.tsx linguist-detectable=true linguist-vendored=false linguist-generated=false
+
+database/seeds/* linguist-detectable=true linguist-vendored=false linguist-generated=false
+packages/* linguist-detectable=true linguist-vendored=false linguist-generated=false
