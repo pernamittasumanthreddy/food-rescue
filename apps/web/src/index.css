@@ -1,0 +1,332 @@
+/* ==========================================================================
+   FOODRESCUE ENTERPRISE DESIGN SYSTEM
+   Indian Eco-Social Enterprise Palette (STRICTLY NO BLUE AS PRIMARY)
+   ========================================================================== */
+
+:root {
+  /* Brand Primary & Forest Greens */
+  --color-primary: #126B4F;
+  --color-primary-dark: #0B4633;
+  --color-primary-light: #1B8A66;
+  --color-primary-subtle: #E8F5EE;
+
+  /* Secondary Emerald & Leaf Tones */
+  --color-secondary: #2E8B57;
+  --color-secondary-light: #48A873;
+  --color-secondary-subtle: #EDF7F1;
+
+  /* Warm Indian Accents: Saffron, Orange & Terracotta */
+  --color-accent: #F28C28;
+  --color-saffron: #F4A340;
+  --color-saffron-light: #FCEBD2;
+  --color-terracotta: #C65D3A;
+  --color-terracotta-light: #F7EAE5;
+
+  /* Warm Cream & Eco Backgrounds */
+  --color-cream: #FFF8EC;
+  --color-cream-card: #FAF6ED;
+  --color-bg-canvas: #F7F5EF;
+  --color-bg-surface: #FFFFFF;
+  --color-border: #E5E0D3;
+  --color-border-subtle: #EFECE3;
+
+  /* High-Contrast Charcoal Typography */
+  --color-text-main: #1F2933;
+  --color-text-muted: #52606D;
+  --color-text-light: #7B8794;
+  --color-text-inverse: #FFFFFF;
+
+  /* Status Colors */
+  --color-success: #2E8B57;
+  --color-warning: #D97706;
+  --color-danger: #C2413B;
+  --color-danger-subtle: #FDF2F2;
+  --color-info: #0D7A68;
+
+  /* Typography */
+  --font-heading: 'Outfit', 'Inter', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-indic: 'Hind', 'Tiro Telugu', sans-serif;
+
+  /* Elevations */
+  --shadow-sm: 0 1px 2px rgba(18, 107, 79, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(18, 107, 79, 0.08), 0 2px 4px -2px rgba(18, 107, 79, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(18, 107, 79, 0.1), 0 4px 6px -4px rgba(18, 107, 79, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(18, 107, 79, 0.12), 0 8px 10px -6px rgba(18, 107, 79, 0.06);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* Reset & Global Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-canvas);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--color-bg-canvas);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Utility Classes */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-text-inverse);
+  box-shadow: 0 4px 10px rgba(18, 107, 79, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(18, 107, 79, 0.35);
+}
+
+.btn-secondary {
+  background-color: var(--color-cream);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: #f5eedb;
+  border-color: var(--color-saffron);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-terracotta) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(242, 140, 40, 0.3);
+}
+
+.btn-accent:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+}
+
+/* Card System */
+.eco-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eco-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.eco-card-cream {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-cream-card) 100%);
+  border: 1px solid var(--color-border);
+}
+
+/* Badge System */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-green {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+  border: 1px solid rgba(18, 107, 79, 0.2);
+}
+
+.badge-saffron {
+  background: var(--color-saffron-light);
+  color: #92400e;
+  border: 1px solid rgba(244, 163, 64, 0.3);
+}
+
+.badge-terracotta {
+  background: var(--color-terracotta-light);
+  color: var(--color-terracotta);
+  border: 1px solid rgba(198, 93, 58, 0.25);
+}
+
+/* Form Styles */
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(18, 107, 79, 0.15);
+}
+
+/* Floating Animation Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg);
+  }
+}
+
+@keyframes waveSlow {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1.05);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes cardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-enter {
+  animation: cardEnter 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(18, 107, 79, 0.25), 0 0 30px rgba(244, 163, 64, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(18, 107, 79, 0.45), 0 0 45px rgba(244, 163, 64, 0.3);
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float-badge {
+  animation: floatBadge 3.5s ease-in-out infinite;
+}
+
+.role-chip-btn {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.role-chip-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(18, 107, 79, 0.15);
+  border-color: var(--color-primary) !important;
+  background-color: #ffffff !important;
+}
+
+.role-chip-btn:active {
+  transform: scale(0.98);
+}
+
+/* Reduced motion accessibility check */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
