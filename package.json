@@ -1,0 +1,26 @@
+{
+  "name": "foodrescue-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FoodRescue - Enterprise Surplus Food Rescue & Donation Platform",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "preview": "npm run preview --workspace=apps/web"
+  },
+  "keywords": [
+    "foodrescue",
+    "food-waste",
+    "surplus-food",
+    "ngo",
+    "donation",
+    "sustainability",
+    "fssai",
+    "india"
+  ],
+  "author": "FoodRescue India Initiative",
+  "license": "Apache-2.0"
+}
